@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #maindiv {
+            display: grid;
+            height: 27rem;
+            width: 27rem;
+            position: relative;
+            top: 2rem;
+            grid-template-columns: auto auto auto;
+        }
+        #box1 {
+            background-color: white;
+            height: 9rem;
+            width: 9rem;
+            border: 1px solid black;
+            border-left: none;
+            border-top: none;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box2 {
+            background-color: white;
+            height: 9rem;
+            width: 9rem;
+            border: 1px solid black;
+            border-top: none;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box3 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            width: 9rem;
+            border-right: none;
+            border-top: none;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box4 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            width: 9rem;
+            border-left: none;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box5 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            width: 9rem;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box6 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            border-right: none;
+            width: 9rem;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box7 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            border-left: none;
+            border-bottom: none;
+            width: 9rem;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box8 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            border-bottom: none;
+            width: 9rem;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #box9 {
+            background-color: white;
+            height: 9rem;
+            border: 1px solid black;
+            border-bottom: none;
+            border-right: none;
+            width: 9rem;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+        #lvl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: red;
+            position: relative;
+            top: 2rem;
+            left: 5rem;
+            display: none;
+        }
+        #mvl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: blue;
+            position: relative;
+            top: 2rem;
+            left: 14rem;
+            display: none;
+        }
+        #rvl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: green;
+            position: relative;
+            top: 2rem;
+            left: 23rem;
+            display: none;
+        }
+        #thl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: yellow;
+            position: relative;
+            top: -7rem;
+            left: 14rem;
+            transform: rotate(90deg);
+            display: none;
+        }
+        #mhl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: purple;
+            position: relative;
+            top: 2rem;
+            left: 14rem;
+            transform: rotate(90deg);
+            display: none;
+        }
+        #bhl {
+            width: 2px;
+            height: 27rem;
+            z-index: 2;
+            background-color: orange;
+            position: relative;
+            top: 11rem;
+            left: 14rem;
+            transform: rotate(90deg);
+            display: none;
+        }
+        
+        #ldl {
+            width: 2px;
+            height: 38.2rem;
+            z-index: 2;
+            background-color: brown;
+            position: relative;
+            top: 2rem;
+            left: 13.5rem;
+            transform: rotate(-45deg);
+            display: none;
+        }
+        #rdl {
+            width: 2px;
+            height: 38.2rem;
+            z-index: 2;
+            background-color: brown;
+            position: relative;
+            top: 2.2rem;
+            left: 13.5rem;
+            transform: rotate(45deg);
+            display: none;
+        }
+        #x-is-the-winner {
+            z-index: 4;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(92, 92, 92, 0.82);
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: algerian;
+            font-size: 10rem;
+            color: rgb(0, 255, 55);
+            text-align: center;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="x-is-the-winner"></div>
+    <div class="eachline" id="lvl"></div>
+    <div class="eachline" id="mvl"></div>
+    <div class="eachline" id="rvl"></div>
+    <div class="eachline" id="thl"></div>
+    <div class="eachline" id="mhl"></div>
+    <div class="eachline" id="bhl"></div>
+    <div class="eachline" id="ldl"></div>
+    <div class="eachline" id="rdl"></div>
+    <div class="eachline" id="maindiv">
+        <div class="eachbox" id="box1"></div>
+        <div class="eachbox" id="box2"></div>
+        <div class="eachbox" id="box3"></div>
+        <div class="eachbox" id="box4"></div>
+        <div class="eachbox" id="box5"></div>
+        <div class="eachbox" id="box6"></div>
+        <div class="eachbox" id="box7"></div>
+        <div class="eachbox" id="box8"></div>
+        <div class="eachbox" id="box9"></div>
+    </div>
+
+    <script src="tictactoe.js"></script>
+</body>
+</html>

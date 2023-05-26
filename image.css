@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    font-family: castellar;
+}
+button {
+    border: 0.5px solid black;
+    position: relative;
+    left: 50%;
+    background-color: chartreuse;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+    border-radius: 0.5rem;
+    font-family: castellar;
+}
+.flex-container {
+    font-family: sans-serif;
+    position: relative;
+    top: 2rem;
+    border: 1px solid black;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img {
+    padding: 10px;
+}

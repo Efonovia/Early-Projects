@@ -1,0 +1,39 @@
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.mainestbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-box {
+    border: 1px solid black;
+    border-radius: 2rem;
+    height: auto;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+#reset {
+    position: relative;
+    left: 3rem;
+    background-color: blue;
+    border: 0.1px solid black;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+#enter {
+    background-color: red;
+    border: 0.1px solid black;
+    padding: 0.6rem;
+    border-radius: 2rem;
+}
+#demo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}

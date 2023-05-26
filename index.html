@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FIND OUT YOUR AGE IN DAYS</h1>
+    <div class="mainestbox">
+        <div class="main-box">
+            <form name="myForm" action="submit" method="dialog">
+                <input name="yearInput" id="yearInput" type="date" placeholder="input your year of birth"><br><br>
+                <button id="enter" onclick="ageToDays()">ENTER</button>
+                <button id="reset" onclick="document.getElementById('demo').innerHTML = ''">RESET</button>
+                <h2 id="demo"></h2>
+            </form>
+            
+        </div>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+</html>
